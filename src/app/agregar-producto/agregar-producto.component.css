@@ -1,0 +1,97 @@
+/* Estilos para el formulario de agregar producto */
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Estilos para los campos de entrada */
+  div {
+    margin-bottom: 10px;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+  }
+  
+  input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Estilos para el botón de agregar producto */
+  button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Estilos para el título "Agregar Nuevo Producto" */
+  h2 {
+    text-align: center;
+  }
+
+  select {
+    width: 100%;
+    font-size: 16px;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    background-color: #fff;
+  }
+
+  /* Estilos para el mat-select */
+.mat-select {
+    width: 100%;
+    font-size: 16px;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    background-color: #fff;
+  }
+  
+  /* Estilos para el texto de la opción seleccionada */
+  .mat-select-value-text {
+    font-size: 16px;
+    color: #333;
+  }
+  
+  /* Estilos para las opciones del mat-select */
+  .mat-option {
+    font-size: 16px;
+    color: #333;
+  }
+  
+  /* Estilos para el texto de las opciones cuando se seleccionan */
+  .mat-option-text {
+    font-size: 16px;
+    color: #333;
+  }
+  
+  /* Estilos para el panel desplegable del mat-select */
+  .mat-select-panel {
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+  }
+  
+  

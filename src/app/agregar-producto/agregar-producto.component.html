@@ -1,0 +1,63 @@
+<h2>Agregar Producto</h2>
+
+<form [formGroup]="nuevoProducto" (ngSubmit)="agregarProducto()">
+    <div>
+        <label for="nombreProducto">Nombre del Producto:</label>
+        <input type="text" id="nombreProducto" formControlName="nombreProducto" required>
+        <div *ngIf="nuevoProducto.get('nombreProducto')?.invalid && nuevoProducto.get('nombreProducto')?.touched">
+          El nombre del producto es requerido.
+        </div>
+      </div>
+
+  <div>
+    <label for="descripcionProducto">Descripción del Producto:</label>
+    <textarea id="descripcionProducto" formControlName="descripcionProducto" required></textarea>
+    <div *ngIf="nuevoProducto.get('descripcionProducto')?.invalid && nuevoProducto.get('descripcionProducto')?.touched">
+      La descripción del producto es requerida.
+    </div>
+  </div>
+
+  <div>
+    <label for="precio">Precio:</label>
+    <input type="number" id="precio" formControlName="precio" required>
+    <div *ngIf="nuevoProducto.get('precio')?.invalid && nuevoProducto.get('precio')?.touched">
+      El precio es requerido y debe ser un número mayor o igual a cero.
+    </div>
+  </div>
+
+  <div>
+    <label for="existencia">Existencia:</label>
+    <input type="number" id="existencia" formControlName="existencia" required>
+    <div *ngIf="nuevoProducto.get('existencia')?.invalid && nuevoProducto.get('existencia')?.touched">
+      La existencia es requerida y debe ser un número mayor o igual a cero.
+    </div>
+  </div>
+
+  <div>
+    <label for="tipoProducto_Id">Tipo de Producto:</label>
+    <select id="tipoProducto_Id" formControlName="tipoProducto_Id" required>
+      <option *ngFor="let tipoProducto of tiposProductos" [value]="tipoProducto.id">{{ tipoProducto.nombreTipoProducto }}</option>
+    </select>
+    <div *ngIf="nuevoProducto.get('tipoProducto_Id')?.invalid && nuevoProducto.get('tipoProducto_Id')?.touched">
+      El tipo de producto es requerido.
+    </div>
+  </div>
+
+  <div>
+    <label for="fechaRegistro">Fecha de Registro:</label>
+    <input type="date" id="fechaRegistro" formControlName="fechaRegistro" required>
+    <div *ngIf="nuevoProducto.get('fechaRegistro')?.invalid && nuevoProducto.get('fechaRegistro')?.touched">
+      La fecha de registro es requerida.
+    </div>
+  </div>
+
+  <div>
+    <label for="fechaEliminado">Fecha de Eliminado:</label>
+    <input type="date" id="fechaEliminado" formControlName="fechaEliminado">
+    <div *ngIf="nuevoProducto.get('fechaEliminado')?.invalid && nuevoProducto.get('fechaEliminado')?.touched">
+      La fecha de eliminado debe ser una fecha válida.
+    </div>
+  </div>
+
+  <button type="submit" [disabled]="nuevoProducto.invalid">Agregar Producto</button>
+</form>
